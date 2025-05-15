@@ -1,0 +1,912 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    transition: 1s;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    margin: 20px;
+}
+.logo #list-icon{
+    width: 25px;
+    height: 25px;
+    margin: 8px;
+    cursor: pointer;
+    color: white;
+}
+.logo #list-icon:hover{
+    color: rgb(27, 112, 209);
+}
+.logo .list{
+    width: 450%;
+    height: 100px;
+    background-color: rgb(63, 61, 61);
+    border-radius: 12px;
+    padding-top: 10px;
+    display: none;
+}
+.logo .list h6{
+    margin-left: 12px;
+    font-size: 18px;
+    color: white;
+}
+.logo .list .your-plan{
+    width: 84%;
+    border-radius: 7px;
+    height: 40px;
+    background-color: transparent;
+    margin-left: 13px;
+    padding-left: 20px;
+    padding-top: 8px;
+    transition: 0.2s;
+    color: white;
+}
+.logo .list .your-plan:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.logo .list ul li:hover{
+    background-color: white;
+    color: black;
+}
+.header-right{
+    width: 40%;
+    height: 40px;
+    background-color: transparent;
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+    margin-right: 20px;
+}
+.header-right #toggle-btn{
+    width: 40px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+}
+.header-right #toggle-off{
+    width: 40px;
+    height: 40px;
+    color: gray;
+    position: relative;
+    right: 20%;
+    display: none;
+}
+.header-right #notification{
+    width: 22px;
+    height: 22px;
+    margin-top: 8px;
+    color: white;
+    cursor: pointer;
+}
+.header-right #profile-icon{
+    width: 22px;
+    height: 22px;
+    margin-top: 8px;
+    color: white;
+    cursor: pointer;
+}
+.header-right #profile-icon:hover{
+    color: rgb(27, 112, 209);
+}
+.profile-box{
+    width: 50%;
+    height: 450px;
+    left: 250px;
+    border-radius: 10px;
+    background-color: rgb(31, 31, 39);
+    position: fixed;
+    top: 100px;
+    z-index: 10;
+    display: none;
+}
+.background{
+    width: 100%;
+    height: 100%;
+}
+.profile-box .image{
+    width: 100%;
+    height: 150px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-box .image #cross{
+    width: 40px;
+    height: 40px;
+    /* margin-left: 350px; */
+    position: absolute;
+    right: 10px;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+.profile-box .image img{
+    width: 22%;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+.profile-box .user-name{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+}
+.profile-box .profile-para{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+.profile-box .edit-profile{
+    width: 90%;
+    height: 60px;
+    background-color: rgb(16, 23, 39);
+    margin-left: 5%;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.profile-box .favourite-file{
+    width: 90%;
+    margin-left: 5%;
+    height: 60px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+}
+.profile-box .log-out{
+    width: 90%;
+    height: 60px;
+    margin-left: 5%;
+    margin-top: 10px;
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.profile-box .log-out #logout{
+    width: 20px;
+    height: 20px;
+    font-weight: 600;
+}
+
+/* section1 */
+.section1{
+    width: 100%;
+    height: 250px;
+    background-color: transparent;
+    padding-top: 30px;
+}
+.section1 h1{
+    text-align: center;
+    color: white;
+}
+.section1 p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.section1 .input-box{
+    width: 50%;
+    margin-left: 24%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+.section1 .input-box::placeholder{
+    padding-left: 20px;
+}
+.search-btn{
+    width: 50px;
+    height: 40px;
+    background-color: rgb(20, 25, 54);
+    border-radius: 10px;
+    border: none;
+}
+
+/* section2 */
+.section2{
+    width: 100%;
+    height: 250px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.section2 h2{
+    font-size: 25px;
+    margin-left: 20px;
+    color: white;
+}
+.section2 .tranding-cards{
+    width: 96%;
+    height: 200px;
+    margin-left: 2%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.section2 .tranding-cards .tranding-card1{
+    width: 32%;
+    height: 150px;
+    background-color: rgb(44, 44, 55);
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: 0.3s;
+    padding: 20px;
+}
+.section2 h5{
+    color: rgb(21, 28, 43);
+}
+.section2 .tranding-cards .tranding-card1:hover{
+    transform: scale(1.05);
+}
+.section2 p{
+    font-size: 15px;
+    color: white;
+}
+.section2 .download-btn1{
+    width: 96%;
+    margin-left: 2%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(16, 23, 39);
+}
+.section2 .download-btn1:hover{
+    background-color: rgb(21, 29, 49);
+}
+.section2 .tranding-cards .tranding-card2{
+    width: 32%;
+    height: 150px;
+    background-color: rgb(44, 44, 55);
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: 0.3s;
+    padding: 20px;
+}
+.section2 .tranding-cards .tranding-card2:hover{
+    transform: scale(1.05);
+}
+.section2 .tranding-cards .tranding-card3{
+    width: 32%;
+    height: 150px;
+    background-color: rgb(44, 44, 55);
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: 0.3s;
+    padding: 20px;
+}
+.section2 .tranding-cards .tranding-card3:hover{
+    transform: scale(1.05);
+}
+
+/* section3 */
+.section3{
+    width: 100%;
+    height: 200px;
+    background-color: transparent;
+    margin-top: 50px;
+}
+.section3 h2{
+    font-size: 25px;
+    margin-left: 20px;
+    color: white;
+}
+.section3 .recommended-cards{
+    width: 80%;
+    height: 150px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    margin-left: 30px;
+}
+.section3 .recommended-cards .recommended-card1{
+    width: 30%;
+    height: 100px;
+    background-color: rgb(44, 44, 55);
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 10px;
+}
+.section3 .recommended-cards h5{
+    color: rgb(21, 28, 43);
+}
+.section3 .recommended-cards .recommended-card2{
+    width: 30%;
+    height: 100px;
+    background-color: rgb(44, 44, 55);
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 10px;
+}
+.section3 .recommended-cards .recommended-card3{
+    width: 30%;
+    height: 100px;
+    background-color: rgb(44, 44, 55);
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 10px;
+}
+.section3 .download-btn2{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    margin-top: 8px;
+    color: white;
+    background-color: rgb(16, 23, 39);
+}
+.section3 .download-btn2:hover{
+    background-color: rgb(21, 29, 49);
+}
+
+/* section4 */
+.section4{
+    width: 100%;
+    height: 200px;
+    background-color: transparent;
+    margin-top: 50px;
+}
+.section4 h2{
+    font-size: 25px;
+    margin-left: 20px;
+    color: white;
+}
+.section4 .explores-cards{
+    width: 100%;
+    height: 130px;
+    background-color: transparent;
+    display:flex;
+    flex-wrap:wrap;
+    gap: 15px;
+    margin-left: 30px;
+} 
+.section4 .explores-cards .SFX{
+    width: 22%;
+    height: 50px;
+    background-color: rgb(37, 37, 37); 
+    color: white;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid white;
+    transition:0.1s;
+}
+.section4 .explores-cards .GFX{
+    width: 22%;
+    height: 50px;
+    background-color: rgb(37, 37, 37);      
+    color: white;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid white;
+    transition:0.1s;
+}
+.section4 .explores-cards .music{
+    width: 22%;
+    height: 50px;
+    background-color: rgb(37, 37, 37); 
+    color: white;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid white;
+    transition:0.1s;
+}
+.section4 .explores-cards .GIFs{
+    width: 22%;
+    height: 50px;
+    background-color: rgb(37, 37, 37); 
+    color: white;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid white;
+    transition:0.1s;
+}
+.section4 .explores-cards .stickers{
+    width: 22%;
+    height: 50px;
+    background-color: rgb(37, 37, 37); 
+    color: white;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid white;
+    transition:0.1s;
+}
+.section4 .explores-cards .images{
+    width: 22%;
+    height: 50px;
+    background-color: rgb(37, 37, 37); 
+    color: white;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid white;
+    transition:0.1s;
+}
+.section4 .explores-cards .backgrounds{
+    width: 22%;
+    height: 50px;
+    background-color: rgb(37, 37, 37); 
+    color: white;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid white;
+    transition:0.1s;
+}
+.section4 .explores-cards .SFX:hover,
+.section4 .explores-cards .GFX:hover,
+.section4 .explores-cards .music:hover,
+.section4 .explores-cards .GIFs:hover,
+.section4 .explores-cards .stickers:hover,
+.section4 .explores-cards .images:hover,
+.section4 .explores-cards .backgrounds:hover{
+    background-color: rgb(51, 51, 51);
+    color: rgb(16, 23, 39);
+}
+
+/* section5 */
+.section5{
+    width: 100%;
+    height: 500px;
+    background-color: transparent;
+    margin-top: 30px;
+}
+.section5 h2{
+    font-size: 25px;
+    margin-left: 20px;
+    color: white;
+}
+.section5 .category-cards{
+    width: 96%;
+    height: 450px;
+    background-color: transparent;
+    display: flex;
+    margin-left: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.section5 .category-cards .category-card1{
+    width: 32%;
+    border-radius: 10px;
+    height: 200px;
+    background-color: rgb(50, 50, 61);
+    border: 1px solid white;
+}
+.section5 .category-cards .category-cards-line{
+    width: 90%;
+    height: 40px;
+    /* background-color: blue; */
+    margin: 5%;
+    display: flex;
+    align-items: center;
+}
+.section5 .category-cards .category-cards-line span{
+    font-size: 18px;
+    color: rgb(16, 23, 39);
+    font-weight: 600;
+    margin-left: 20px;
+}
+.section5 .category-cards .audio{
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 30px;
+    background-color: white;
+    height: 60px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.section5 .category-cards .audio input{
+    width: 35%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.section5 .category-cards .audio #play-btn{
+    cursor: pointer;
+}
+.section5 .category-cards .category-card2{
+    width: 32%;
+    border-radius: 10px;
+    height: 200px;
+    background-color: rgb(50, 50, 61);
+    border: 1px solid white;
+}
+.section5 .category-cards .category-card3{
+    width: 32%;
+    border-radius: 10px;
+    height: 200px;
+    background-color: rgb(50, 50, 61);
+    border: 1px solid white;
+}
+.section5 .category-cards .category-card4{
+    width: 32%;
+    border-radius: 10px;
+    height: 200px;
+    background-color: rgb(50, 50, 61);
+    border: 1px solid white;
+}
+.section5 .category-cards .category-card5{
+    width: 32%;
+    border-radius: 10px;
+    height: 200px;
+    background-color: rgb(50, 50, 61);
+    border: 1px solid white;
+}
+.section5 .category-cards .audio #sound{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.section5 .category-cards .audio img{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.section5 .category-cards .audio img:hover{
+    background-color: rgb(248, 244, 238);
+}
+.section5 .category-cards .buttons{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+}
+.section5 .category-cards .buttons button{
+    width: 43%;
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(16, 23, 39);
+    color: white;
+}
+
+/* section6 */
+.section6{
+    width: 100%;
+    height: 280px;
+    background-color: transparent;
+    margin-top: 50px;
+}
+.section6 .vip-line #vip{
+    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+}
+.section6 .vip-line{
+    display: flex;
+}
+.section6 .vip-line h2{
+    margin-left: 10px;
+    color: white;
+}
+.section6 .vip-cards{
+    width: 100%;
+    height: 230px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.section6 .vip-cards .vip-card1{
+    width: 23%;
+    height: 220px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    border: 1px solid gold;
+    box-shadow: 0 2px 3px gold;
+}
+.section6 .vip-cards .vip-card2{
+    width: 23%;
+    height: 220px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    border: 1px solid gold;
+    box-shadow: 0 2px 3px gold;
+}
+.section6 .vip-cards .vip-card3{
+    width: 23%;
+    height: 220px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    border: 1px solid gold;
+    box-shadow: 0 2px 3px gold;
+}
+.section6 .vip-cards .vip-card4{
+    width: 23%;
+    height: 220px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+    border: 1px solid gold;
+    box-shadow: 0 2px 3px gold;
+}
+.section6 .vip-cards .image{
+    width: 100%;
+    height: 90px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section6 .vip-cards .image img{
+    width: 40%;
+    height: 90%;
+    border-radius: 50%;
+    border: 1px solid gold;
+    box-shadow: 0px 2px 5px gold;
+    margin-top: 20px;
+}
+.section6 .vip-cards .name{
+    width: 100%;
+    height: 40px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.section6 .vip-cards .name h5{
+    font-weight: 700;
+    color: rgb(16, 23, 39);
+    margin-top: 20px;
+}
+.section6 .vip-cards .vip-button{
+    width: 100%;
+    height: 50px;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.section6 .vip-cards .vip-button button{
+    width: 50%;
+    border-radius: 8px;
+    border: none;
+    height: 35px;
+    font-weight: 600;
+    background-color: white;
+    margin-top: 10px;
+}
+.section6 .vip-cards .vip-button button:hover{
+    background-color: rgb(223, 221, 221);
+}
+.section6 .vip-line #star{
+    width: 25px;
+    height: 25px;
+    margin-left: 30px;
+}
+
+@media (max-width:765px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: black;
+    }
+    header{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .header-right{
+        width: 40%;
+        height: 40px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .section1{
+        padding-top: 50px;
+        height: 250px;
+    }
+    .section1 .input-box::placeholder{
+        font-size: 10px;
+        padding-left: 10px;
+    }
+    .section2 .tranding-cards{
+        gap: 10px;
+        padding-top: 20px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+    .section4 .explores-cards{
+        height: 100px;
+        display: flex;
+        /* flex-direction: column; */
+        gap: 10px;
+        align-items: center;
+        margin-left: 50px;
+        
+    }
+    .section2{
+        height: 500px;
+    }
+    .section2 .tranding-cards .tranding-card1,
+    .section2 .tranding-cards .tranding-card2,
+    .section2 .tranding-cards .tranding-card3{
+        width: 80%;
+        height: 200px;
+    }
+    .section4 .explores-cards .SFX,
+    .section4 .explores-cards .GFX,
+    .section4 .explores-cards .music,
+    .section4 .explores-cards .GIFs,
+    .section4 .explores-cards .stickers,
+    .section4 .explores-cards .images,
+    .section4 .explores-cards .backgrounds{
+        
+        width: 40%;
+        height: 60px;
+    }
+    .section4 .explores-cards{
+        height: 400px;
+    }
+    .section5{
+        margin-top: 300px;
+        height: 1200px;
+    }
+    .section5 .category-cards{
+        height: 1150px;
+        display:flex;
+        gap: 8px;
+        justify-content: center;
+    }
+    .section5 .category-cards .category-card1,
+    .section5 .category-cards .category-card2,
+    .section5 .category-cards .category-card3,
+    .section5 .category-cards .category-card4,
+    .section5 .category-cards .category-card5{
+        width: 80%;
+    }
+    .section5 .category-cards .category-card1,
+    .section5 .category-cards .category-card2,
+    .section5 .category-cards .category-card3,
+    .section5 .category-cards .category-card4,
+    .section5 .category-cards .category-card5{
+        height: 230px;
+    }
+    .section6{
+        height: 680px;
+        margin-top: 100px;
+    }
+    .section6 .vip-cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section6 .vip-cards .name h5{
+        font-size: 10px;
+    }
+    .section6 .vip-cards .vip-button{
+        font-size: 7px;
+    }
+    .header-right #toggle-off{
+        right: 30%;
+        display: none;
+    }
+}
+@media (max-width:740px){
+    .section3 .recommended-cards{
+        display:flow-root;
+        gap: 10px;
+        padding-top: 20px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .section3 .recommended-cards .recommended-card1,
+    .section3 .recommended-cards .recommended-card2,
+    .section3 .recommended-cards .recommended-card3{
+        width: 60%;
+    }
+    .section3{
+        margin-top: 100px;
+    }
+    .section3 .recommended-cards{
+        width: 100%;
+    }
+    .section4{
+        margin-top: 200px;
+    }
+    .profile-box{
+        left: 150px;
+        top: 150px;
+    }
+    
+}
